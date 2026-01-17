@@ -1,0 +1,62 @@
+export default function StepTwo({ formData, setFormData, next }) {
+  return (
+    <div>
+      <h3>Design Preferences</h3>
+      <input
+  placeholder="Tone (Modern / Minimal / Bold)"
+  value={formData.tone}
+  onChange={(e) =>
+    setFormData({ ...formData, tone: e.target.value })
+  }
+  style={{
+    width: "100%",
+    padding: "12px 16px",
+    borderRadius: "12px",
+    border: "none",
+    background: "rgba(255,255,255,0.15)",
+    color: "white",
+    fontSize: "16px",
+    marginTop: "10px",
+    outline: "none"
+  }}
+/>
+
+<input
+  placeholder="Color Theme (Blue / Purple / Green / Orange)"
+  value={formData.color}
+  onChange={(e) =>
+    setFormData({ ...formData, color: e.target.value })
+  }
+  style={{
+    width: "100%",
+    padding: "12px 16px",
+    borderRadius: "12px",
+    border: "none",
+    background: "rgba(255,255,255,0.15)",
+    color: "white",
+    fontSize: "16px",
+    marginTop: "15px",
+    outline: "none"
+  }}
+/>
+
+      <br /><br />
+      <button
+  style={{
+    marginTop:"20px",
+    padding:"10px 25px",
+    borderRadius:"20px",
+    border:"none",
+    background:"#38bdf8",
+    color:"black",
+    fontWeight:"bold",
+    cursor:"pointer"
+  }}
+  onClick={next}
+>
+  Next
+</button>
+
+    </div>
+  );
+}
